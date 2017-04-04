@@ -1,5 +1,7 @@
 import React, { PropTypes, Component } from 'react'
 
+import Subheader from '../Subheader/Subheader'
+
 class FormContact extends Component {
   constructor(props) {
     super(props)
@@ -49,9 +51,9 @@ class FormContact extends Component {
   renderThankYouMessage() {
     return (
       <div className="FormContact-thank-you">
-        <h2 className="FormContact-thank-you-header">
+        <Subheader className="FormContact-thank-you-header">
           Message Received!
-        </h2>
+        </Subheader>
 
         <p className="FormContact-thank-you-body">
           Thanks for reaching out, we will be in touch soon.
@@ -63,29 +65,29 @@ class FormContact extends Component {
   render () {
     return (
       <form className="FormContact-form"
-            id="form"
-            action=""
-            method="POST"
-            target="no-target">
+        id="form"
+        action=""
+        method="POST"
+        target="no-target">
 
         <label className="FormContact-input-label">
           Name
           <input id={this.formIds.name}
-                 className="FormContact-input FormContact-input-name"
-                 ref="FormContact-input-name"
-                 name="FormContact-name"
-                 required
-                 type="text" />
-         </label>
+            className="FormContact-input FormContact-input-name"
+            ref="FormContact-input-name"
+            name="FormContact-name"
+            required
+            type="text" />
+        </label>
 
         <label className="FormContact-input-label">
           Email
           <input id={this.formIds.email}
-                 className="FormContact-input FormContact-input-email"
-                 ref="FormContact-input-email"
-                 name="FormContact-email"
-                 required
-                 type="email" />
+            className="FormContact-input FormContact-input-email"
+            ref="FormContact-input-email"
+            name="FormContact-email"
+            required
+            type="email" />
         </label>
 
         <label className="FormContact-input-label">

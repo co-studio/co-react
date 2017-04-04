@@ -64,7 +64,6 @@ $input-inactive-color: $gray-9;
 }
 
 .FormContact-thank-you-header {
-  @include subheader();
   text-align: left;
   border: none;
 }
