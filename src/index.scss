@@ -9,7 +9,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Gotham', serif;
+  font-family: $font-family-primary, serif;
   font-size: 18px;
   font-weight: 300;
   color: $black;
@@ -28,7 +28,7 @@ body {
 }
 
 input, textarea {
-  font-family: 'Gotham';
+  font-family: $font-family-primary;
 }
 
 //
@@ -51,10 +51,7 @@ input, textarea {
 @import './components/FormEmail/FormEmail.scss';
 @import './components/CardUseCase/CardUseCase.scss';
 
-@import './pages/About/About.scss';
-@import './pages/Process/Process.scss';
 @import './pages/Landing/Landing.scss';
-@import './pages/Bots/Bots.scss';
 @import './pages/Contact/Contact.scss';
 
 @import './styles/media-queries.scss';
