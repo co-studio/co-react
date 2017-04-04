@@ -9,28 +9,7 @@
   min-height: 700px;
   width: 100%;
   padding: 0 15px;
-  background-image: url('./assets/images/covers/cover-nyc.jpg');
-  background-size: cover;
-  background-position: bottom;
-}
-
-.headline-container-about {
-  background-image: url('./assets/images/covers/cover-about.jpg');
-  background-position: center;
-}
-
-.headline-container-process {
-  background-image: url('./assets/images/covers/cover-process.jpg');
-  background-position: center;
-}
-
-.headline-container-bots {
-  background-image: url('./assets/images/covers/cover-bots.jpg');
-}
-
-.headline-container-contact {
-  background-image: url('./assets/images/covers/cover-contact.jpg');
-  background-position: center;
+  background: $color-background;
 }
 
 .headline {

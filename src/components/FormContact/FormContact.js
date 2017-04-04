@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react'
 
-import Subheader from '../Subheader/Subheader'
+import SubHeader from '../SubHeader/SubHeader'
 
 class FormContact extends Component {
   constructor(props) {
@@ -51,9 +51,9 @@ class FormContact extends Component {
   renderThankYouMessage() {
     return (
       <div className="FormContact-thank-you">
-        <Subheader className="FormContact-thank-you-header">
+        <SubHeader className="FormContact-thank-you-header">
           Message Received!
-        </Subheader>
+        </SubHeader>
 
         <p className="FormContact-thank-you-body">
           Thanks for reaching out, we will be in touch soon.

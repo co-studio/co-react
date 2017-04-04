@@ -82,9 +82,6 @@ class Navbar extends Component {
   render() {
     const navItems = [
       { label: 'Home', href: '/' },
-      { label: 'Process', href: '/process' },
-      { label: 'Blog', href: 'https://blog.costudio.io' },
-      { label: 'About', href: '/about' },
       { label: 'Contact Us', href: '/contact' },
     ]
 
