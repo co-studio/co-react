@@ -10,7 +10,8 @@ class Navbar extends Component {
     this.toggleMobileMenu = this.toggleMobileMenu.bind(this)
     this.getItemClassnames = this.getItemClassnames.bind(this)
     this.renderNavItem = this.renderNavItem.bind(this)
-    this.renderMobileNavItem = this.renderMobileNavItem.bind(this)
+    this.renderMobileNavItem = this.renderNavItem.bind(null, 'nav-mobile-item')
+    this.renderDesktopNavItem = this.renderNavItem.bind(null, 'nav-item')
 
     this.state = {
       menuOpen: false
@@ -23,79 +24,67 @@ class Navbar extends Component {
     })
   }
 
-  getItemClassnames(href, className) {
+  getItemClassnames(href, className, type) {
     let classNames = className
+
     if (this.props.location.pathname === href) {
       classNames += ` ${className}-active`
+    }
+
+    if (type && type === 'button') {
+      classNames += ' nav-item-btn'
     }
 
     return classNames
   }
 
-  renderNavItem({ href, label }) {
-    const classNames = this.getItemClassnames(href, 'nav-item')
+  renderNavItem(itemClassName, { href, label, destination, type }) {
+    const classNames = this.getItemClassnames(href, itemClassName, type)
 
-    if (label === 'Blog') {
+    if (destination && destination === 'external') {
       return (
-        <a href={href}
+        <a className={classNames}
+          href={href}
           target="_blank"
-          className={classNames}
           key={label}>
           {label}
         </a>
       )
     }
-
-    return (
-      <Link to={href}
-        className={classNames}
-        key={label}>
-        {label}
-      </Link>
-    )
-  }
-
-  renderMobileNavItem({ href, label }) {
-    const classNames = this.getItemClassnames(href, 'nav-mobile-item')
-
-    if (label === 'Blog') {
+    else {
       return (
-        <a href={href}
-          target="_blank"
+        <Link to={href}
           className={classNames}
           key={label}>
           {label}
-        </a>
+        </Link>
       )
     }
-
-    return (
-      <Link to={href}
-        className={classNames}
-        key={label}>
-        {label}
-      </Link>
-    )
   }
 
   render() {
     const { logo } = this.props
 
     const navItems = [
-      { label: 'Home', href: '/' },
-      { label: 'Contact Us', href: '/contact' },
+      { label: 'About', href: '/about', destination: 'internal' },
+      { label: 'Blog', href: '/blog', destination: 'external' },
+      { label: 'Calendar', href: '/calendar', destination: 'internal' },
+      { label: 'Contact Us', href: '/contact', destination: 'internal' },
+      { label: 'Get Started', href: '/contact', type: 'button', destination: 'external' },
     ]
 
     return (
       <nav id="navbar" className="navbar">
         <Link to="/">
           <img src={logo}
-            className="logo"
-            alt="Co Studio"
+            className="nav-logo"
+            alt="logo"
           />
         </Link>
 
-        {navItems.reverse().map(this.renderNavItem)}
+        {/* {navItems.reverse().map(this.renderNavItem)} */}
+
+        {navItems.reverse().map(this.renderDesktopNavItem)}
 
         <i className="nav-menu" onClick={this.toggleMobileMenu}>
           <img className="nav-menu-icon"

@@ -3,10 +3,15 @@
 .navbar {
   box-sizing: border-box;
   width: 100%;
-  padding: $padding-1 $padding-2;
-  position: absolute;
+  padding: $padding-1/2 $padding-2;
+  position: fixed;
   left: 0;
   z-index: 101;
+  background: $color-tertiary;
+}
+
+.nav-logo {
+  height: 36px;
 }
 
 .nav-item,
@@ -20,10 +25,21 @@
   float: right;
   transition: $hover-transition;
   border-radius: $border-radius;
+  border: 2px transparent solid;
 
   &:hover {
     background: $gray-darkest;
     color: $white;
+  }
+}
+
+.nav-item-btn {
+  border: 2px $color-primary solid;
+  border-radius: $border-radius;
+
+  &:hover {
+    color: $white;
+    background: $color-primary;
   }
 }
 

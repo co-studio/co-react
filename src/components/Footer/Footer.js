@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import Button from '../Button/Button'
 import iconTwitter from '../../assets/icons/icon-twitter.svg';
 import iconFacebook from '../../assets/icons/icon-facebook.svg';
 
