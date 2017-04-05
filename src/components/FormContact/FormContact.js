@@ -1,4 +1,4 @@
-import React, { PropTypes, Component } from 'react'
+import React, { Component } from 'react'
 
 import SubHeader from '../SubHeader/SubHeader'
 
@@ -103,7 +103,7 @@ class FormContact extends Component {
         <div className="FormContact-form-footer">
           {this.state.showThankYou && this.renderThankYouMessage()}
 
-          <button className="btn btn-purple FormContact-submit-btn"
+          <button className="Button FormContact-submit-btn"
             type="submit"
             onClick={this.submitForm}>
             Send Message

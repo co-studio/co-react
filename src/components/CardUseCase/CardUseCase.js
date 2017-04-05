@@ -12,11 +12,11 @@ class CardUseCase extends Component {
   renderListItem(text, index) {
     return (
       <li className="CardUseCase-list-item"
-          key={index}>
+        key={index}>
         <img src={checkmarkInactive}
-             className="CardUseCase-list-item-icon"
-             type="presentation" />
-           <p className="CardUseCase-list-item-text">
+          className="CardUseCase-list-item-icon"
+          type="presentation" />
+        <p className="CardUseCase-list-item-text">
           {text}
         </p>
       </li>
@@ -28,8 +28,8 @@ class CardUseCase extends Component {
     return (
       <div className="CardUseCase">
         <img src={image}
-             className="CardUseCase-illustration"
-             alt={header} />
+          className="CardUseCase-illustration"
+          alt={header} />
 
         <h3 className="CardUseCase-header">
           {header}

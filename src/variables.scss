@@ -33,7 +33,7 @@ $white: #fff;
 $color-primary: $purple;
 $color-secondary: $black-purple;
 $color-tertiary: $black-purple-2;
-$color-background: $gray-6;
+$color-background: $gray-4;
 
 $font-family-primary: 'Gotham';
 $font-family-heading: 'Gotham';
@@ -55,12 +55,6 @@ $font-family-paragraph: 'Gotham';
   font-family: $font-family-primary;
   src: url('./assets/fonts/Gotham-Medium.ttf') format('truetype');
   font-weight: 600;
-}
-
-@font-face {
-  font-family: $font-family-primary;
-  src: url('./assets/fonts/Gotham-Light.ttf') format('truetype');
-  font-weight: 100;
 }
 
 //

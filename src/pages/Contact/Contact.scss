@@ -6,6 +6,14 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+}
+
+.contact-form-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   padding: $padding-2 $padding-1;
   background-color: $gray-2;
 }

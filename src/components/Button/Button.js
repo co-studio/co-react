@@ -3,10 +3,10 @@ import { Link } from 'react-router'
 
 class Button extends Component {
   render() {
-    const { href, color, children } = this.props
-
+    const { href, className, children } = this.props
     return (
-      <Link to={href} className={`btn btn-${color}`}>
+      <Link className={`Button ${className}`}
+        to={href}>
         {children}
       </Link>
     )

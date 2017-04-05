@@ -1,6 +1,6 @@
 @import '../../variables.scss';
 
-$input-active-color: $purple;
+$input-active-color: $color-primary;
 $input-inactive-color: $gray-9;
 
 .FormEmail-form {
@@ -9,7 +9,7 @@ $input-inactive-color: $gray-9;
   flex-direction: column;
   width: 500px;
   padding: $padding-1;
-  background: rgba($black-purple, 0.7);
+  background: rgba($color-secondary, 0.7);
   border-radius: $border-radius;
 }
 

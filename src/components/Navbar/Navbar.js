@@ -39,9 +39,9 @@ class Navbar extends Component {
     if (label === 'Blog') {
       return (
         <a href={href}
-           target="_blank"
-           className={classNames}
-           key={label}>
+          target="_blank"
+          className={classNames}
+          key={label}>
           {label}
         </a>
       )
@@ -49,8 +49,8 @@ class Navbar extends Component {
 
     return (
       <Link to={href}
-            className={classNames}
-            key={label}>
+        className={classNames}
+        key={label}>
         {label}
       </Link>
     )
@@ -62,9 +62,9 @@ class Navbar extends Component {
     if (label === 'Blog') {
       return (
         <a href={href}
-           target="_blank"
-           className={classNames}
-           key={label}>
+          target="_blank"
+          className={classNames}
+          key={label}>
           {label}
         </a>
       )
@@ -72,8 +72,8 @@ class Navbar extends Component {
 
     return (
       <Link to={href}
-            className={classNames}
-            key={label}>
+        className={classNames}
+        key={label}>
         {label}
       </Link>
     )
@@ -88,23 +88,32 @@ class Navbar extends Component {
     return (
       <nav id="navbar" className="navbar">
         <Link to="/">
-          <img src={logoWhite} className="logo" alt="Co Studio" />
+          <img src={logoWhite}
+            className="logo"
+            alt="Co Studio"
+          />
         </Link>
 
         {navItems.reverse().map(this.renderNavItem)}
 
         <i className="nav-menu" onClick={this.toggleMobileMenu}>
           <img className="nav-menu-icon"
-               src={iconHamburger}
-               alt="menu" />
-         </i>
+            src={iconHamburger}
+            alt="menu"
+          />
+        </i>
 
         <nav className={`nav-mobile nav-mobile-open-${this.state.menuOpen}`}>
           <i className="nav-menu" onClick={this.toggleMobileMenu}>
             <img className="nav-menu-icon"
-                 src={iconClose}
-                 alt="Close" />
-           </i>
+              src={iconClose}
+              alt="Close"
+            />
+            {/* <img className="nav-menu-icon"
+              src={iconClose}
+              alt="Close"
+            /> */}
+          </i>
 
           <div className="nav-mobile-items" onClick={this.toggleMobileMenu}>
             {navItems.reverse().map(this.renderMobileNavItem)}

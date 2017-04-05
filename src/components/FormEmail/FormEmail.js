@@ -54,30 +54,30 @@ class FormEmail extends React.Component {
 
     return (
       <form className={`FormEmail-form ${className}`}
-            id="form"
-            action=""
-            method="POST"
-            target="no-target">
+        id="form"
+        action=""
+        method="POST"
+        target="no-target">
 
         <label className="FormEmail-input-label">
           Email
           <input id={this.formIds.email}
-                 className="FormEmail-input FormEmail-input-email"
-                 ref="FormEmail-input-email"
-                 name="FormEmail-email"
-                 required
-                 type="email"
-                 placeholder={this.state.placeholder} />
+            className="FormEmail-input FormEmail-input-email"
+            ref="FormEmail-input-email"
+            name="FormEmail-email"
+            required
+            type="email"
+            placeholder={this.state.placeholder} />
 
           <img className={`FormEmail-checkmark ${this.state.checkmarkActive}`}
-               src={iconCheckmark}
-               role="presentation"/>
+            src={iconCheckmark}
+            role="presentation"/>
         </label>
 
         <div className="FormEmail-form-footer">
-          <button className="btn btn-purple FormEmail-submit-btn"
-                  type="submit"
-                  onClick={this.submitForm}>
+          <button className="Button FormEmail-submit-btn"
+            type="submit"
+            onClick={this.submitForm}>
             {btnText}
           </button>
         </div>

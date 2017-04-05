@@ -3,7 +3,6 @@
 @import '../components/Hero/Hero.scss';
 @import '../components/Button/Button.scss';
 @import '../components/IconList/IconList.scss';
-@import '../components/ContentSection/ContentSection.scss';
 @import '../components/Thumbnail/Thumbnail.scss';
 @import '../components/FormContact/FormContact.scss';
 @import '../components/FormEmail/FormEmail.scss';
@@ -19,7 +18,6 @@
   @include navbar-sm();
   @include footer-sm();
   @include button-sm();
-  @include contentSection-sm();
   @include thumbnail-sm();
   @include FormContact-sm();
   @include FormEmail-sm();

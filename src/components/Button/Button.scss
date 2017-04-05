@@ -1,6 +1,6 @@
 @import '../../variables.scss';
 
-.btn {
+.Button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,27 +10,22 @@
   text-decoration: none;
   text-transform: uppercase;
   font-family: $font-family-primary;
+  font-weight: 300;
+  background: $color-primary;
+  color: $white;
   border: 1px solid transparent;
   transition: $hover-transition;
   cursor: pointer;
   outline: none;
 
   &:hover {
+    background: darken($color-primary, 8%);
     box-shadow: $btn-shadow;
   }
 }
 
-.btn-purple {
-  background: $purple;
-  color: $white;
-
-  &:hover {
-    background: darken($purple, 3%);
-  }
-}
-
 @mixin button-sm() {
-  .btn,
+  .Button,
   .btn-group {
     width: 100%;
     text-align: center;

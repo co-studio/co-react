@@ -1,12 +1,12 @@
-import React, { PropTypes, Component } from 'react'
+import React, { Component } from 'react'
 
 class SubHeadline extends Component {
   render () {
     const { children, className } = this.props
     return (
-      <p className={`SubHeadline ${className}`}>
+      <h3 className={`SubHeadline ${className}`}>
         {children}
-      </p>
+      </h3>
     )
   }
 }
