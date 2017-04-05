@@ -44,7 +44,7 @@ class Landing extends Component {
         <Header>
           Here's a Header (an h1)
         </Header>
-
+        
         <SubHeader>
           My SubHeader (h2)
         </SubHeader>
