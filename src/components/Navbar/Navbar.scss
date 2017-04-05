@@ -34,7 +34,7 @@
 }
 
 .nav-item-btn {
-  border: 2px $color-primary solid;
+  border: 2px rgba($color-primary, 0.5) solid;
   border-radius: $border-radius;
 
   &:hover {

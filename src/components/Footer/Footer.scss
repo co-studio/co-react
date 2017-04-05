@@ -12,7 +12,7 @@
   justify-content: center;
   width: 100%;
   background-color: $color-tertiary;
-  color: $gray-darkest;
+  color: $gray-light;
   font-weight: 300;
   font-size: $font-size-label;
 }
@@ -22,13 +22,14 @@
   display: flex;
   justify-content: space-between;
   width: 70%;
-  padding: $padding-3 $padding-1;
+  padding: $padding-1 $padding-1;
 }
 
 .footer-left,
 .footer-right {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 //

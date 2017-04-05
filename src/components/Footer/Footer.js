@@ -32,11 +32,13 @@ class Footer extends Component {
       <footer className="footer-container">
         <div className="footer-links">
           <div className="footer-left">
-            Footer Left
+            © We Walk Together
           </div>
 
           <div className="footer-right">
-            Footer Right
+            <div className="footer-icons">
+              {icons.map(this.renderSMIcon)}
+            </div>
           </div>
         </div>
       </footer>
