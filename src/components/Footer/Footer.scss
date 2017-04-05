@@ -12,7 +12,7 @@
   justify-content: center;
   width: 100%;
   background-color: $color-tertiary;
-  color: $gray-7;
+  color: $gray-darkest;
   font-weight: 300;
   font-size: $font-size-label;
 }
@@ -43,7 +43,7 @@
 .footer-email {
   margin-bottom: 5px;
   text-decoration: none;
-  color: $gray-7;
+  color: $gray-darkest;
   transition: $hover-transition;
 
   &:hover {

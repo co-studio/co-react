@@ -20,10 +20,10 @@ body {
 }
 
 ::selection {
-  background: lighten($color-primary, 30%); /* WebKit/Blink Browsers */
+  background: lighten($color-primary, 15%); /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: lighten($color-primary, 30%); /* Gecko Browsers */
+  background: lighten($color-primary, 15%); /* Gecko Browsers */
 }
 
 input, textarea {

@@ -4,24 +4,15 @@
 // ==================================================
 //
 
-$purple: #5c38e3;
-$black: #1a1529;
-$black-purple: #272040;
-$black-purple-2: #4F4374;
-$gray-13: #272040;
-$gray-12: #3c3653;
-$gray-11: #524D66;
-$gray-10: #676279;
-$gray-9:  #7d798c;
-$gray-8:  #938f9f;
-$gray-7:  #a9a6b3;
-$gray-6:  #bfbdc5;
-$gray-5:  #c9c7ce;
-$gray-4:  #d3d2d7;
-$gray-3:  #dddcdf;
-$gray-2:  #e7e7e8;
-$gray-1:  #f0eff1;
-$gray-0:  #f4f4f5;
+$orange: #ff8552;
+$brown: #664e4c;
+$black: #39393a;
+$gray-darkest:  #4c4c4d;
+$gray-darker:  #747475;
+$gray-dark:  #9c9c9c;
+$gray-light:  #c3c3c3;
+$gray-lighter:  #d7d7d7;
+$gray-lightest:  #ebebeb;
 $white: #fff;
 
 //
@@ -30,14 +21,14 @@ $white: #fff;
 // ==================================================
 //
 
-$color-primary: $purple;
-$color-secondary: $black-purple;
-$color-tertiary: $black-purple-2;
-$color-background: $gray-4;
+$color-primary: $orange;
+$color-secondary: $brown;
+$color-tertiary: $black;
+$color-background: $gray-lightest;
 
-$font-family-primary: 'Gotham';
-$font-family-heading: 'Gotham';
-$font-family-paragraph: 'Gotham';
+$font-family-primary: 'Halis-Rounded';
+$font-family-heading: 'Halis-Rounded';
+$font-family-paragraph: 'Halis-Rounded';
 
 //
 // Typefaces
@@ -47,14 +38,20 @@ $font-family-paragraph: 'Gotham';
 
 @font-face {
   font-family: $font-family-primary;
-  src: url('./assets/fonts/Gotham-Book.ttf') format('truetype');
+  src: url('./assets/fonts/HalisR-Regular.otf') format('opentype');
   font-weight: 300;
 }
 
 @font-face {
   font-family: $font-family-primary;
-  src: url('./assets/fonts/Gotham-Medium.ttf') format('truetype');
+  src: url('./assets/fonts/HalisR-Medium.otf') format('opentype');
   font-weight: 600;
+}
+
+@font-face {
+  font-family: $font-family-primary;
+  src: url('./assets/fonts/HalisR-Bold.otf') format('opentype');
+  font-weight: 900;
 }
 
 //
@@ -113,5 +110,5 @@ $btn-shadow: 1px 2px 6px 1px rgba(0,0,0,.3);
 @include placeholder {
   font-family: $font-family-primary;
   font-size: $font-size-base;
-  color: $gray-8;
+  color: $gray-darkest;
 }
