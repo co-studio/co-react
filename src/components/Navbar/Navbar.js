@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 
-import logoWhite from '../../assets/co-logo-white.svg'
 import iconHamburger from '../../assets/icons/icon-hamburger.svg'
 import iconClose from '../../assets/icons/icon-close.svg'
 
@@ -80,6 +79,8 @@ class Navbar extends Component {
   }
 
   render() {
+    const { logo } = this.props
+
     const navItems = [
       { label: 'Home', href: '/' },
       { label: 'Contact Us', href: '/contact' },
@@ -88,7 +89,7 @@ class Navbar extends Component {
     return (
       <nav id="navbar" className="navbar">
         <Link to="/">
-          <img src={logoWhite}
+          <img src={logo}
             className="logo"
             alt="Co Studio"
           />

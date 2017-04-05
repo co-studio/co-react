@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Button from '../Button/Button'
-import logoWhite from '../../assets/co-logo-white.svg';
 import iconTwitter from '../../assets/icons/icon-twitter.svg';
 import iconFacebook from '../../assets/icons/icon-facebook.svg';
 
