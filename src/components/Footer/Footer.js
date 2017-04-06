@@ -24,8 +24,8 @@ class Footer extends Component {
 
   render() {
     const icons = [
-      { image: iconTwitter, href: 'https://twitter.com/CoStudio_io' },
-      { image: iconFacebook, href: 'https://facebook.com/CoStudio.io' }
+      // { image: iconTwitter, href: 'https://twitter.com/CoStudio_io' },
+      { image: iconFacebook, href: 'https://facebook.com/groups/walktogetherapp/' }
     ]
 
     return(
@@ -33,6 +33,12 @@ class Footer extends Component {
         <div className="footer-links">
           <div className="footer-left">
             © We Walk Together
+            <br />
+            <a className="footer-credits"
+              href="https://costudio.io"
+              target="_blank">
+              Website by Co Studio
+            </a>
           </div>
 
           <div className="footer-right">

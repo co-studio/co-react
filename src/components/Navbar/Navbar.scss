@@ -8,6 +8,22 @@
   left: 0;
   z-index: 101;
   background: $color-tertiary;
+  transition: $hover-transition;
+}
+
+.navbar-no-background {
+  background: rgba($color-tertiary, 0.5);
+  // background: transparent;
+
+  .nav-item,
+  .nav-mobile-item {
+    // color: $color-tertiary;
+  }
+}
+
+.nav-logo-container {
+  display: inline-block;
+  margin-top: 5px;
 }
 
 .nav-logo {
@@ -17,7 +33,7 @@
 .nav-item,
 .nav-mobile-item {
   padding: $padding-1 / 2;
-  color: $gray-dark;
+  color: $gray-light;
   font-weight: 300;
   font-size: $font-size-label;
   text-transform: uppercase;

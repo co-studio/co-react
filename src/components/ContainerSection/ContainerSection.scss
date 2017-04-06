@@ -1,0 +1,12 @@
+@import '../../variables.scss';
+
+.ContainerSection {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: $layout-width;
+  margin-bottom: $padding-2;
+  text-align: center;
+}

@@ -30,6 +30,16 @@ input, textarea {
   font-family: $font-family-primary;
 }
 
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: $hover-transition;
+
+  &:hover {
+    color: darken($color-primary, 15%);
+  }
+}
+
 //
 // Components
 // ==================================================
@@ -38,7 +48,9 @@ input, textarea {
 
 @import './components/Navbar/Navbar.scss';
 @import './components/Footer/Footer.scss';
+@import './components/FooterCTA/FooterCTA.scss';
 @import './components/Button/Button.scss';
+@import './components/Divider/Divider.scss';
 
 //
 // Components: Text
@@ -49,6 +61,7 @@ input, textarea {
 @import './components/Header/Header.scss';
 @import './components/SubHeader/SubHeader.scss';
 @import './components/SubHeadline/SubHeadline.scss';
+@import './components/Paragraph/Paragraph.scss';
 
 //
 // Components: Images
@@ -60,6 +73,7 @@ input, textarea {
 @import './components/IconList/IconList.scss';
 @import './components/Thumbnail/Thumbnail.scss';
 @import './components/CardUseCase/CardUseCase.scss';
+@import './components/CardAbout/CardAbout.scss';
 
 //
 // Components: Forms
@@ -77,6 +91,8 @@ input, textarea {
 //
 
 @import './components/ContainerPage/ContainerPage.scss';
+@import './components/ContainerSection/ContainerSection.scss';
+@import './components/ContainerRows/ContainerRows.scss';
 @import './pages/NavbarFooter/NavbarFooter.scss';
 
 //
@@ -87,6 +103,7 @@ input, textarea {
 
 @import './pages/Landing/Landing.scss';
 @import './pages/Contact/Contact.scss';
+@import './pages/About/About.scss';
 
 //
 // Media Queries

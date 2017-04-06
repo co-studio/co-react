@@ -1,8 +1,7 @@
 @import '../../variables.scss';
 
-.app-container {
+.ContainerRows {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
+  justify-content: space-between;
 }

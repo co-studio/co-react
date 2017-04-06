@@ -1,4 +1,45 @@
 @import '../../variables.scss';
 
+.Hero-landing {
+  background-position: center;
+}
+
+.Hero-highlight {
+  color: $color-primary;
+  font-weight: 900;
+  font-size: $font-size-header * 1.4;
+}
+.Hero-headline-container {
+  display: flex;
+  width: $layout-width;
+}
+
+.Hero-headline {
+  align-self: flex-start;
+}
+
+.Hero-button {
+  margin-top: $padding-1;
+  background: $blue-facebook;
+
+  &:hover {
+    background: darken($blue-facebook, 10%);
+  }
+}
+
+.Hero-button-icon {
+  height: 28px;
+  margin-right: $padding-1/2;
+}
+
+.mission-images {
+  width: 100%;
+}
+
+.FooterCTA-highlight {
+  font-size: 51px;
+  line-height: 1;
+}
+
 @mixin landing-sm() {
 }

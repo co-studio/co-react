@@ -7,14 +7,30 @@ import iconClose from '../../assets/icons/icon-close.svg'
 class Navbar extends Component {
   constructor(props) {
     super(props)
+
     this.toggleMobileMenu = this.toggleMobileMenu.bind(this)
     this.getItemClassnames = this.getItemClassnames.bind(this)
+    this.trackScroll = this.trackScroll.bind(this)
     this.renderNavItem = this.renderNavItem.bind(this)
     this.renderMobileNavItem = this.renderNavItem.bind(null, 'nav-mobile-item')
     this.renderDesktopNavItem = this.renderNavItem.bind(null, 'nav-item')
 
     this.state = {
-      menuOpen: false
+      menuOpen: false,
+      scrollClass: 'navbar-no-background'
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.trackScroll)
+  }
+
+  trackScroll() {
+    if (window.pageYOffset > 300) {
+      this.setState({ scrollClass: null })
+    }
+    else {
+      this.setState({ scrollClass: 'navbar-no-background' })
     }
   }
 
@@ -74,15 +90,14 @@ class Navbar extends Component {
     ]
 
     return (
-      <nav id="navbar" className="navbar">
-        <Link to="/">
+      <nav id="navbar" className={`navbar ${this.state.scrollClass}`}>
+        <Link className="nav-logo-container"
+          to="/">
           <img src={logo}
             className="nav-logo"
             alt="logo"
           />
         </Link>
-
-        {/* {navItems.reverse().map(this.renderNavItem)} */}
 
         {navItems.reverse().map(this.renderDesktopNavItem)}
 
@@ -99,10 +114,6 @@ class Navbar extends Component {
               src={iconClose}
               alt="Close"
             />
-            {/* <img className="nav-menu-icon"
-              src={iconClose}
-              alt="Close"
-            /> */}
           </i>
 
           <div className="nav-mobile-items" onClick={this.toggleMobileMenu}>

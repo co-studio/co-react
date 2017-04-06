@@ -70,6 +70,14 @@
   padding-left: 10px;
 }
 
+.footer-credits {
+  color: rgba($color-primary, 0.2);
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
 @mixin footer-sm() {
   .footer-links {
     flex-direction: column;

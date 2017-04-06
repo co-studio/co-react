@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
-import logo from '../../assets/logo-white.svg'
+// import logo from '../../assets/logo-white.svg'
+import logo from '../../assets/logo-wordmark-white.svg'
 
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'

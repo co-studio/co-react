@@ -1,9 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router'
 
-class Button extends Component {
-  render() {
-    const { href, className, children } = this.props
+const Button = ({ href, className, children, destination }) => {
+  if (destination === 'external') {
+    return (
+      <a className={`Button ${className}`}
+        href={href}
+        target="_blank">
+        {children}
+      </a>
+    )
+  }
+  else {
     return (
       <Link className={`Button ${className}`}
         to={href}>
