@@ -1,3 +1,6 @@
+// Containers
+@import '../components/ContainerSection/ContainerSection.scss';
+// Components
 @import '../components/Navbar/Navbar.scss';
 @import '../components/Footer/Footer.scss';
 @import '../components/Hero/Hero.scss';
@@ -7,8 +10,10 @@
 @import '../components/FormContact/FormContact.scss';
 @import '../components/FormEmail/FormEmail.scss';
 @import '../components/CardUseCase/CardUseCase.scss';
-
+@import '../components/Paragraph/Paragraph.scss';
+// Pages
 @import '../pages/Landing/Landing.scss';
+@import '../pages/About/About.scss';
 @import '../pages/Contact/Contact.scss';
 
 // small screen size (sm)
@@ -23,9 +28,16 @@
   @include FormEmail-sm();
   @include CardUseCase-sm();
 
-  @include landing-sm();
 }
 
 // medium screen size (md)
-@media (max-width: 1024px) {
+@media (max-width: 1045px) {
+  // Containers
+  @include ContainerSection-mobile();
+  // Components
+  @include Paragraph-mobile();
+  // Pages
+  @include Landing-mobile();
+  @include About-mobile();
+  @include Contact-mobile();
 }

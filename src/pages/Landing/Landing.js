@@ -58,24 +58,26 @@ class Landing extends Component {
           </SubHeader>
 
           <Paragraph>
-            We are a collection of over <TextStyle weight="300">3300</TextStyle> individuals determined to
-            help make your community safer and stronger. If you are walking
-            somewhere and feel uncomfortable or unsafe, we will be there to
-            walk with you. <TextStyle weight="300">We Walk Together</TextStyle> to bolster safety and connectivity.
+            We Walk Together is a community of like-minded individuals
+            prepared to walk with you, wherever you may be. Our aim is to pair
+            “walkers” with “buddies” in an effort to reduce attacks and
+            harassment of citizens in commute. Whether you are a student
+            experiencing bullying or an adult scared to be out alone, we want
+            to walk with you.
           </Paragraph>
 
-          <SubHeadline>
+          {/* <SubHeadline>
             Get involved in your community
-          </SubHeadline>
+            </SubHeadline>
 
-          <Paragraph>
+            <Paragraph>
             Here's how it works. Simply send a message
             to <a href="https://m.me/1763620363890366" target="_blank">We Walk Together</a> on
             Facebook Messenger and choose whether you would like to be walked
             for security, or if you would like to find someone to protect. Get
             matched, walk together, and strengthen the bonds of your community!
+          </Paragraph> */}
 
-          </Paragraph>
         </ContainerSection>
 
         <ContainerSection>

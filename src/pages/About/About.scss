@@ -3,3 +3,10 @@
 .About-Hero-img {
   width: 550px;
 }
+
+@mixin About-mobile {
+  .About-Hero-img {
+    width: 100%;
+    max-width: 600px;
+  }
+}

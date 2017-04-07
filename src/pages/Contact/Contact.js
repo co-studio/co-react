@@ -17,7 +17,8 @@ class Contact extends Component {
     return (
       <ContainerPage className="Contact-ContainerPage">
         <Hero className="Contact-Hero">
-          <img src={contactHeadline} />
+          <img className="Contact-Hero-img"
+            src={contactHeadline} />
         </Hero>
         <ContainerSection className="Contact-ContainerSection">
           <FormContact />
