@@ -1,23 +1,14 @@
 @import '../../variables.scss';
 
-.contact-container {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+.Contact-ContainerPage {
+  background: $gray-lighter;
 }
 
-.contact-form-container {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: $padding-2 $padding-1;
-  background-color: $gray-lightest;
+.Contact-Hero {
+  min-height: 450px;
+  background: $color-dark;
 }
 
-.contact-header {
-  margin-bottom: $padding-2;
+.Contact-ContainerSection {
+  margin-top: $padding-2;
 }

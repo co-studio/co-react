@@ -7,17 +7,17 @@
   position: fixed;
   left: 0;
   z-index: 101;
-  background: $color-tertiary;
+  background: $color-dark;
   transition: $hover-transition;
 }
 
 .navbar-no-background {
-  background: rgba($color-tertiary, 0.5);
+  background: rgba($color-dark, 0.5);
   // background: transparent;
 
   .nav-item,
   .nav-mobile-item {
-    // color: $color-tertiary;
+    // color: $color-dark;
   }
 }
 
@@ -98,7 +98,7 @@
     flex-direction: column;
     height: 100vh;
     width: 100%;
-    background-color: $color-tertiary;
+    background-color: $color-dark;
     transition: $slide-transition;
     z-index: 100;
   }

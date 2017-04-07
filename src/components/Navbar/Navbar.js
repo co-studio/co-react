@@ -86,7 +86,7 @@ class Navbar extends Component {
       { label: 'Blog', href: '/blog', destination: 'external' },
       { label: 'Calendar', href: '/calendar', destination: 'internal' },
       { label: 'Contact Us', href: '/contact', destination: 'internal' },
-      { label: 'Get Started', href: '/contact', type: 'button', destination: 'external' },
+      { label: 'Get Started', href: 'https://m.me/1763620363890366', type: 'button', destination: 'external' },
     ]
 
     return (
