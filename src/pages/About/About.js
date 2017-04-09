@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 
 // Images
 import aboutHero from '../../assets/images/heroes/about-hero.jpg'
@@ -12,9 +12,7 @@ import ContainerSection from '../../components/ContainerSection/ContainerSection
 import ContainerRows from '../../components/ContainerRows/ContainerRows'
 // Components
 import Hero from '../../components/Hero/Hero'
-import Header from '../../components/Header/Header'
 import Header2 from '../../components/Header2/Header2'
-import Button from '../../components/Button/Button'
 import Divider from '../../components/Divider/Divider'
 import Paragraph from '../../components/Paragraph/Paragraph'
 import CardAbout from '../../components/CardAbout/CardAbout'
@@ -30,7 +28,8 @@ class About extends Component {
         <Hero image={aboutHero}
           className="About-landing">
           <img className="About-Hero-img"
-            src={aboutHeadline} />
+            src={aboutHeadline}
+            role="presentation"/>
         </Hero>
 
         <ContainerSection>

@@ -30,8 +30,9 @@ class Landing extends Component {
       <ContainerPage>
         <Hero image={heroImage}>
           <img className="About-Hero-img"
-            src={aboutHeadline} />
-
+            src={aboutHeadline}
+            role="presentation"
+          />
 
           <div style={{marginTop: '50px'}}>
             <Header>

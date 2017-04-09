@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 
 // Images
 
@@ -7,10 +7,7 @@ import ContainerPage from '../../components/ContainerPage/ContainerPage'
 import ContainerSection from '../../components/ContainerSection/ContainerSection'
 // Components
 import Hero from '../../components/Hero/Hero'
-import Header2 from '../../components/Header2/Header2'
 import FormContact from '../../components/FormContact/FormContact'
-import Header3 from '../../components/Header3/Header3'
-import Divider from '../../components/Divider/Divider'
 
 class Contact extends Component {
   render() {

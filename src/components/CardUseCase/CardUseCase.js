@@ -20,7 +20,7 @@ class CardUseCase extends Component {
         key={index}>
         <img src={checkmarkInactive}
           className="CardUseCase-list-item-icon"
-          type="presentation" />
+          role="presentation" />
         <p className="CardUseCase-list-item-text">
           {text}
         </p>
