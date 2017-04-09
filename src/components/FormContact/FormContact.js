@@ -1,26 +1,22 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
-import SubHeader from '../SubHeader/SubHeader'
+import Header2 from '../Header2/Header2'
 
 class FormContact extends Component {
-  constructor(props) {
-    super(props)
-    this.submitForm = this.submitForm.bind(this)
-    this.renderThankYouMessage = this.renderThankYouMessage.bind(this)
-
-    this.state = {
-      showThankYou: false
-    }
-
-    this.formIds = {
-      name: '728759201',
-      email: '544180993',
-      message: '1326784560'
-    }
-    this.formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeE-_UKZblQhImKp-fSXSh1YH2KxMM_7b_QONOdiIijz3xyxw'
+  static propTypes = {
+    formIds: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+      message: PropTypes.string.isRequired,
+    }),
+    formUrl: PropTypes.string.isRequired,
   }
 
-  submitForm(e) {
+  state = {
+    showThankYou: false
+  }
+
+  submitForm = (e) => {
     e.preventDefault()
     const baseUrl = this.formUrl
 
@@ -49,12 +45,12 @@ class FormContact extends Component {
     })
   }
 
-  renderThankYouMessage() {
+  renderThankYouMessage = () => {
     return (
       <div className="FormContact-thank-you">
-        <SubHeader className="FormContact-thank-you-header">
+        <Header2 className="FormContact-thank-you-header">
           Message Received!
-        </SubHeader>
+        </Header2>
 
         <p className="FormContact-thank-you-body">
           Thanks for reaching out, we will be in touch soon.
@@ -64,6 +60,7 @@ class FormContact extends Component {
   }
 
   render () {
+    const { formIds } = this.props
     return (
       <section className="FormContact-container">
         <form className="FormContact-form"
@@ -74,7 +71,7 @@ class FormContact extends Component {
 
           <label className="FormContact-input-label">
             Name
-            <input id={this.formIds.name}
+            <input id={formIds.name}
               className="FormContact-input FormContact-input-name"
               ref="FormContact-input-name"
               name="FormContact-name"
@@ -84,7 +81,7 @@ class FormContact extends Component {
 
           <label className="FormContact-input-label">
             Email
-            <input id={this.formIds.email}
+            <input id={formIds.email}
               className="FormContact-input FormContact-input-email"
               ref="FormContact-input-email"
               name="FormContact-email"
@@ -94,7 +91,7 @@ class FormContact extends Component {
 
           <label className="FormContact-input-label">
             Message
-            <textarea id={this.formIds.message}
+            <textarea id={formIds.message}
               className="FormContact-input FormContact-input-message"
               ref="FormContact-input-message"
               name="FormContact-message"

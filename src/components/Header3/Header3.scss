@@ -1,10 +1,10 @@
 @import '../../variables.scss';
 
-.SubHeader {
+.Header3 {
   margin: 0;
   text-align: center;
-  font-size: $font-size-header;
-  font-weight: $font-weight-medium;
   color: $black;
+  font-size: $font-size-Header2;
+  font-weight: $font-weight-bold;
   text-transform: uppercase;
 }

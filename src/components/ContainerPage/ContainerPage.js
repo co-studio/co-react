@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 
-const ContainerPage = (props) => {
+const ContainerPage = ({ className, children }) => {
   return (
-    <section className={`ContainerPage ${props.className}`}>
-      {props.children}
+    <section className={`ContainerPage ${className}`}>
+      {children}
     </section>
   )
+}
+
+ContainerPage.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
 }
 
 export default ContainerPage

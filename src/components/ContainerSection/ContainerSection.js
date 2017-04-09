@@ -8,4 +8,9 @@ const ContainerSection = ({ className, children }) => {
   )
 }
 
+ContainerSection.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+}
+
 export default ContainerSection

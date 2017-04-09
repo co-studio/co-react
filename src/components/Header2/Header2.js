@@ -1,16 +1,16 @@
 import React, { Component, PropTypes } from 'react'
 
-const Header = ({ className, children }) => {
+const Header2 = ({ className, children }) => {
   return (
-    <h1 className={`Header ${className}`}>
+    <h2 className={`Header2 ${className}`}>
       {children}
-    </h1>
+    </h2>
   )
 }
 
-Header.propTypes = {
+Header2.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
 }
 
-export default Header
+export default Header2

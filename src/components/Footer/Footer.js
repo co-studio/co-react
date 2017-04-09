@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import iconTwitter from '../../assets/icons/icon-twitter.svg';
 import iconFacebook from '../../assets/icons/icon-facebook.svg';
 
 class Footer extends Component {
-  constructor(props) {
-    super(props)
-    this.renderSMIcon = this.renderSMIcon.bind(this)
+  static propTypes = {
+    twitterUrl: PropTypes.string,
+    facebookUrl: PropTypes.string,
   }
 
-  renderSMIcon({ href, image }) {
+  renderSMIcon = ({ href, image }) => {
     return (
       <a href={href}
         className="footer-icon-link"
@@ -23,10 +23,13 @@ class Footer extends Component {
   }
 
   render() {
+    const { twitterUrl, facebookUrl } = this.props
+
     const icons = [
-      // { image: iconTwitter, href: 'https://twitter.com/CoStudio_io' },
-      { image: iconFacebook, href: 'https://facebook.com/groups/walktogetherapp/' }
+      { image: iconTwitter, href: twitterUrl },
+      { image: iconFacebook, href: facebookUrl }
     ]
+    .filter(iconObj => iconObj.href !== undefined)
 
     return(
       <footer className="footer-container">

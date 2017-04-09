@@ -1,93 +1,109 @@
 import React, { Component } from 'react'
 
 // Illustrations
-import heroImage from '../../assets/images/heros/landing-hero.jpg'
-import missionImages from '../../assets/images/mission-images.jpg'
+import heroImage from '../../assets/images/background.jpg'
+import thumbnail from '../../assets/images/thumbnail.jpg'
+import aboutHeadline from '../../assets/images/about-headline.svg'
 import footerCTABackground from '../../assets/images/footer-cta-background.jpg'
-import messengerIcon from '../../assets/icons/icon-messenger.svg'
 // Containers
 import ContainerPage from '../../components/ContainerPage/ContainerPage'
 import ContainerSection from '../../components/ContainerSection/ContainerSection'
+import ContainerRows from '../../components/ContainerRows/ContainerRows'
+import FooterCTA from '../../components/FooterCTA/FooterCTA'
 // Components
 import Hero from '../../components/Hero/Hero'
 import Header from '../../components/Header/Header'
-import SubHeader from '../../components/SubHeader/SubHeader'
-import SubHeadline from '../../components/SubHeadline/SubHeadline'
 import Button from '../../components/Button/Button'
-import Divider from '../../components/Divider/Divider'
+import FormEmail from '../../components/FormEmail/FormEmail'
+import Header2 from '../../components/Header2/Header2'
+import Header3 from '../../components/Header3/Header3'
+import Thumbnail from '../../components/Thumbnail/Thumbnail'
+import CardUseCase from '../../components/CardUseCase/CardUseCase'
+import CardAbout from '../../components/CardAbout/CardAbout'
 import Paragraph from '../../components/Paragraph/Paragraph'
+import Divider from '../../components/Divider/Divider'
 import TextStyle from '../../components/TextStyle/TextStyle'
-import FooterCTA from '../../components/FooterCTA/FooterCTA'
 
 class Landing extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     return (
       <ContainerPage>
-        <Hero image={heroImage}
-          className="Hero-landing">
+        <Hero image={heroImage}>
+          <img className="About-Hero-img"
+            src={aboutHeadline} />
 
-          <div className="Hero-headline-container">
-            <div className="Hero-headline">
-              <Header>
-                <span className="Hero-highlight">safety</span>&<span className="Hero-highlight">unity</span>
-                <br/>
-                one walk at a time
-              </Header>
 
-              <Button className="Hero-button"
-                destination="external"
-                href="https://m.me/1763620363890366">
-                <img className="Hero-button-icon"
-                  src={messengerIcon}
-                />
-                Get Involved
-              </Button>
-            </div>
+          <div style={{marginTop: '50px'}}>
+            <Header>
+              Here's a Header (h1)
+            </Header>
           </div>
+
+          <Button className="Hero-button">
+            Button
+          </Button>
         </Hero>
 
         <ContainerSection>
-          <Divider text="mission" />
+          <Divider text="Divider" />
 
-          <SubHeader>
-            Safer, Stronger Communities
-          </SubHeader>
-
-          <Paragraph>
-            We Walk Together is a community of like-minded individuals
-            prepared to walk with you, wherever you may be. Our aim is to pair
-            “walkers” with “buddies” in an effort to reduce attacks and
-            harassment of citizens in commute. Whether you are a student
-            experiencing bullying or an adult scared to be out alone, we want
-            to walk with you.
-          </Paragraph>
-
-          {/* <SubHeadline>
-            Get involved in your community
-            </SubHeadline>
-
-            <Paragraph>
-            Here's how it works. Simply send a message
-            to <a href="https://m.me/1763620363890366" target="_blank">We Walk Together</a> on
-            Facebook Messenger and choose whether you would like to be walked
-            for security, or if you would like to find someone to protect. Get
-            matched, walk together, and strengthen the bonds of your community!
-          </Paragraph> */}
-
+          <Header2>
+            Header2 (h2)
+          </Header2>
         </ContainerSection>
 
         <ContainerSection>
-          <img className="mission-images"
-            src={missionImages} />
+          <Header3>
+            Header3 (h3)
+          </Header3>
+
+          <Paragraph>
+            A Paragraph too
+            <br/>
+            We Walk Together is an initiative that started on the evening of
+            November 9th, the day we all learned the results of the Presidential
+            election. As the morning unfolded, more and more cases of attacks
+            and harassment started to fill up our newsfeeds.
+            <br/>
+            <TextStyle weight={900}>TextStyle</TextStyle>
+            <TextStyle weight={100}>TextStyle</TextStyle>
+          </Paragraph>
+
+          <FormEmail
+            btnText="my btnText"
+            formIds={{ email: '1632870892' }}
+            formUrl="https://docs.google.com/forms/d/e/1FAIpQLSfd35xRCBfA7WQni0FFhLWRm02_obkcMs9bneB4BNUwrYI4xA"
+          />
+
+          <ContainerRows>
+            <Thumbnail
+              image={thumbnail}
+              href="none"
+              alt="Thumbnail Title"
+            />
+
+            <CardAbout
+              header="Ava Mandeville"
+              subheader="Volunteer"
+              description="Passionate about people and building bridges,
+              Ava leads all of our volunteer efforts. She directs individual and
+              corporate allies who have reached out to WWT."
+              image={thumbnail}
+            />
+
+            <CardUseCase
+              image={thumbnail}
+              header="Card Header"
+              listItems={[
+                'Item Uno',
+                'Item Dos',
+              ]}
+            />
+          </ContainerRows>
+
         </ContainerSection>
 
-
-        <FooterCTA
-          image={footerCTABackground}>
+        <FooterCTA image={footerCTABackground}>
           <div>
             <Header>
               Ready to make a difference
@@ -95,12 +111,10 @@ class Landing extends Component {
               in <span className="FooterCTA-highlight">your community?</span>
             </Header>
 
-            <Button className="Hero-button"
+            <Button
+              className="Hero-button"
               destination="external"
               href="https://m.me/1763620363890366">
-              <img className="Hero-button-icon"
-                src={messengerIcon}
-              />
               Get Involved
             </Button>
           </div>

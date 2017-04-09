@@ -1,11 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 import checkmarkInactive from '../../assets/icons/icon-checkmark-inactive.svg'
 
 class CardUseCase extends Component {
+  static propTypes = {
+    image: PropTypes.string,
+    listItems: PropTypes.array,
+    header: PropTypes.string,
+  }
+
   constructor(props) {
     super(props)
-
     this.renderListItem = this.renderListItem.bind(this)
   }
 

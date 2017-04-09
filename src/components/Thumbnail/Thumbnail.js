@@ -1,39 +1,24 @@
-import React, { Component } from 'react'
+import React, { PropTypes } from 'react'
 
-class Thumbnail extends Component {
-  render() {
-    const { image, href, title, description } = this.props
-    const disabled = (href) ? '' : 'Thumbnail-disabled'
-    return (
-      <div className="Thumbnail-container">
-        <a className="Thumbnail-image-container"
-          href={href}
-          target="_blank">
-          <img className="Thumbnail-image"
-            src={image}
-            alt={title} />
-        </a>
+const Thumbnail = ({ href, image, alt, className }) => {
+  return (
+    <div className={`Thumbnail ${className}`}>
+      <a className="Thumbnail-image-container"
+        href={href}
+        target="_blank">
+        <img className="Thumbnail-image"
+          src={image}
+          alt={alt} />
+      </a>
+    </div>
+  )
+}
 
-        {title || description &&
-
-          <div className="Thumbnail-caption">
-            <a className={`Thumbnail-link ${disabled}`}
-              href={href}
-              target="_blank">
-              <h3 className="Thumbnail-title">
-                {title}
-              </h3>
-            </a>
-
-            <p className="Thumbnail-description">
-              {description}
-            </p>
-          </div>
-
-        }
-      </div>
-    )
-  }
+Thumbnail.propTypes = {
+  image: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  href: PropTypes.string,
+  className: PropTypes.string,
 }
 
 export default Thumbnail

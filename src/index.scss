@@ -59,8 +59,8 @@ a {
 //
 
 @import './components/Header/Header.scss';
-@import './components/SubHeader/SubHeader.scss';
-@import './components/SubHeadline/SubHeadline.scss';
+@import './components/Header2/Header2.scss';
+@import './components/Header3/Header3.scss';
 @import './components/Paragraph/Paragraph.scss';
 
 //
@@ -70,7 +70,6 @@ a {
 //
 
 @import './components/Hero/Hero.scss';
-@import './components/IconList/IconList.scss';
 @import './components/Thumbnail/Thumbnail.scss';
 @import './components/CardUseCase/CardUseCase.scss';
 @import './components/CardAbout/CardAbout.scss';
@@ -93,7 +92,7 @@ a {
 @import './components/ContainerPage/ContainerPage.scss';
 @import './components/ContainerSection/ContainerSection.scss';
 @import './components/ContainerRows/ContainerRows.scss';
-@import './pages/NavbarFooter/NavbarFooter.scss';
+@import './pages/ContainerSite/ContainerSite.scss';
 
 //
 // Components: Pages

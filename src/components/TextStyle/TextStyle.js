@@ -9,4 +9,10 @@ const TextStyle = ({ className, children, weight }) => {
   )
 }
 
+TextStyle.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  weight: PropTypes.number,
+}
+
 export default TextStyle

@@ -9,4 +9,10 @@ const FooterCTA = ({className, children, image}) => {
   )
 }
 
+FooterCTA.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  image: PropTypes.string,
+}
+
 export default FooterCTA

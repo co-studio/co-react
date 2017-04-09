@@ -8,4 +8,9 @@ const ContainerRows = ({ className, children }) => {
   )
 }
 
+ContainerRows.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+}
+
 export default ContainerRows

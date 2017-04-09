@@ -1,6 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 class CardAbout extends Component {
+  static propTypes = {
+    image: PropTypes.string,
+    header: PropTypes.string,
+    subheader: PropTypes.string,
+    destination: PropTypes.string,
+  }
+
   render () {
     const { image, header, subheader, description } = this.props
     return (

@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 // Images
-import aboutHero from '../../assets/images/heros/about-hero.jpg'
+import aboutHero from '../../assets/images/heroes/about-hero.jpg'
 import aboutHeadline from '../../assets/images/about-headline.svg'
 import rachelFustini from '../../assets/images/about/rachel-fustini.jpg'
 import avaMandeville from '../../assets/images/about/ava-mandeville.jpg'
@@ -13,7 +13,7 @@ import ContainerRows from '../../components/ContainerRows/ContainerRows'
 // Components
 import Hero from '../../components/Hero/Hero'
 import Header from '../../components/Header/Header'
-import SubHeader from '../../components/SubHeader/SubHeader'
+import Header2 from '../../components/Header2/Header2'
 import Button from '../../components/Button/Button'
 import Divider from '../../components/Divider/Divider'
 import Paragraph from '../../components/Paragraph/Paragraph'
@@ -36,9 +36,9 @@ class About extends Component {
         <ContainerSection>
           <Divider text="About us" />
 
-          <SubHeader>
+          <Header2>
             Our Story
-          </SubHeader>
+          </Header2>
 
           <Paragraph>
             We Walk Together is an initiative that started on the evening of
@@ -100,14 +100,14 @@ class About extends Component {
         <ContainerSection>
           <Divider text="Team" />
 
-          <SubHeader>
+          <Header2>
             Meet the team
-          </SubHeader>
+          </Header2>
 
           <ContainerRows>
             <CardAbout
               header="Rachel Fustini"
-              subheader="PR & Marketing Director"
+              Header2="PR & Marketing Director"
               description="Our media outreach and marketing guru, Rachel has
               connected with Fortune 500 companies, non-profits and Universities
               who want to see WWT realized."
@@ -116,7 +116,7 @@ class About extends Component {
 
             <CardAbout
               header="Ava Mandeville"
-              subheader="Volunteer"
+              Header2="Volunteer"
               description="Passionate about people and building bridges,
               Ava leads all of our volunteer efforts. She directs individual and
               corporate allies who have reached out to WWT."
@@ -125,7 +125,7 @@ class About extends Component {
 
             <CardAbout
               header="Ava Mandeville"
-              subheader="Volunteer"
+              Header2="Volunteer"
               description="Passionate about people and building bridges,
               Ava leads all of our volunteer efforts. She directs individual and
               corporate allies who have reached out to WWT."

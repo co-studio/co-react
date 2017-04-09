@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 
 const Button = ({ href, className, children, destination }) => {
@@ -19,6 +19,18 @@ const Button = ({ href, className, children, destination }) => {
       </Link>
     )
   }
+}
+
+Button.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  href: PropTypes.string.isRequired,
+  destination: PropTypes.string.isRequired,
+}
+
+Button.defaultProps = {
+  destination: 'internal',
+  href: '/about'
 }
 
 export default Button

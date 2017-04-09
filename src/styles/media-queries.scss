@@ -5,7 +5,6 @@
 @import '../components/Footer/Footer.scss';
 @import '../components/Hero/Hero.scss';
 @import '../components/Button/Button.scss';
-@import '../components/IconList/IconList.scss';
 @import '../components/Thumbnail/Thumbnail.scss';
 @import '../components/FormContact/FormContact.scss';
 @import '../components/FormEmail/FormEmail.scss';
@@ -18,7 +17,6 @@
 
 // small screen size (sm)
 @media (max-width: 768px) {
-  @include iconList-sm();
   @include hero-sm();
   @include navbar-sm();
   @include footer-sm();
@@ -27,7 +25,6 @@
   @include FormContact-sm();
   @include FormEmail-sm();
   @include CardUseCase-sm();
-
 }
 
 // medium screen size (md)

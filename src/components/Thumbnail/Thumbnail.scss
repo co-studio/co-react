@@ -1,6 +1,6 @@
 @import '../../variables.scss';
 
-.Thumbnail-container {
+.Thumbnail {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -28,36 +28,8 @@
 
 }
 
-.Thumbnail-link {
-  text-decoration: none;
-  color: $color-primary;
-  transition: $hover-transition;
-
-  &:hover {
-    color: darken($color-primary, 20%);
-  }
-}
-
-.Thumbnail-caption {
-  width: 100%;
-}
-
-.Thumbnail-title {
-  margin-top: 10px;
-  margin-bottom: 5px;
-  font-weight: $font-weight-regular;
-}
-
-.Thumbnail-description {
-  margin: 0;
-}
-
-.Thumbnail-disabled {
-  cursor: not-allowed;
-}
-
 @mixin Thumbnail-sm() {
-  .Thumbnail-container {
+  .Thumbnail {
     width: 100%;
   }
 }

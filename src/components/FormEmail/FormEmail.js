@@ -3,36 +3,31 @@ import React, { PropTypes } from 'react'
 import iconCheckmark from '../../assets/icons/icon-checkmark.svg'
 
 class FormEmail extends React.Component {
-  constructor(props) {
-    super(props)
-    this.submitForm = this.submitForm.bind(this)
-
-    this.state = {
-      checkmarkActive: 'FormEmail-checkmark-hidden',
-      placeholder: 'What\'s your email?'
-    }
-
-    this.formIds = {
-      email: '1632870892',
-    }
+  static propTypes = {
+    formIds: PropTypes.shape({
+      email: PropTypes.string.isRequired,
+    }),
   }
 
-  submitForm(e) {
-    e.preventDefault()
-    const baseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfd35xRCBfA7WQni0FFhLWRm02_obkcMs9bneB4BNUwrYI4xA'
+   state = {
+    checkmarkActive: 'FormEmail-checkmark-hidden',
+    placeholder: 'What\'s your email?'
+  }
 
-    const inputs = [
-      this.refs['FormEmail-input-email'],
-    ]
+  submitForm = (e) => {
+    const { formUrl } = this.props
+    e.preventDefault()
+
+    const inputs = [ this.refs['FormEmail-input-email'] ]
 
     if (inputs[0].value === '') {
       return
     }
 
     const buildInputStr = (ref) => `entry.${ref.id}=${ref.value}`
-    const [ nameStr, emailStr, messageStr ] = inputs.map(buildInputStr)
+    const [ emailStr ] = inputs.map(buildInputStr)
 
-    const requestUrl = `${baseUrl}/formResponse?${nameStr}&${emailStr}&${messageStr}&submit=Submit`
+    const requestUrl = `${formUrl}/formResponse?${emailStr}&submit=Submit`
     fetch(requestUrl,
       {
         method: 'POST',
@@ -61,7 +56,7 @@ class FormEmail extends React.Component {
 
         <label className="FormEmail-input-label">
           Email
-          <input id={this.formIds.email}
+          <input id={this.props.formIds.email}
             className="FormEmail-input FormEmail-input-email"
             ref="FormEmail-input-email"
             name="FormEmail-email"

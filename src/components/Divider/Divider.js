@@ -11,4 +11,8 @@ const Divider = ({ text }) => {
   )
 }
 
+Divider.propTypes = {
+  text: PropTypes.string.isRequired,
+}
+
 export default Divider
